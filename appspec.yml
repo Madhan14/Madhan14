@@ -1,8 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /app
+  - source: /
     destination: /var/www/html
+    overwrite: true
+
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
