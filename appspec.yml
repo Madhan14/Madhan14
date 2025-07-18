@@ -4,9 +4,8 @@ files:
   - source: /
     destination: /var/www/html
     overwrite: true
-
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: root
+      timeout: 180
+      runas: ec2-user
